@@ -130,6 +130,10 @@ class Interfaz:
         self.ejecutar_boton = tk.Button(root, text="Ejecutar Código", command=self.ejecutar_codigo)
         self.ejecutar_boton.pack()
 
+        # Botón de validación de código
+        self.validar_boton = tk.Button(root, text="Validar Código", command=self.validar_codigo)
+        self.validar_boton.pack()
+
         # Resultado en la consola
         self.consola_label = tk.Label(root, text="Resultado:")
         self.consola_label.pack()
@@ -164,6 +168,22 @@ class Interfaz:
 
         # Restaurar la salida estándar
         sys.stdout = original_stdout
+
+    def validar_codigo(self):
+        codigo = self.codigo_text.get("1.0", tk.END)
+        
+        try:
+            # Intenta analizar el código para verificar su validez sintáctica
+            instrucciones = g.parse(codigo)
+            self.mostrar_mensaje("El código es válido.")
+        except Exception as e:
+            # Captura cualquier excepción que ocurra durante el análisis del código
+            self.mostrar_mensaje(f"Error de sintaxis: {str(e)}")
+
+
+    def mostrar_mensaje(self, mensaje):
+        # Muestra un mensaje en la consola
+        self.consola_text.insert(tk.END, mensaje + "\n")
 
     def write(self, text):
         # Método necesario para redirigir la salida estándar
