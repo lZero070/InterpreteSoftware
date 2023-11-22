@@ -31,7 +31,7 @@ class ProcesadorCodigo:
             ts_local = TS.TablaDeSimbolos(self.ts_global.simbolos)
             self.procesar_instrucciones(instr.instrucciones, ts_local)
 
-    def procesar_SINO(self, instr):
+    def procesar_NO_CUMPLE(self, instr):
         val = self.resolver_expreision_logica(instr.expLogica)
         if val:
             ts_local = TS.TablaDeSimbolos(self.ts_global.simbolos)
