@@ -12,7 +12,7 @@ class ProcesadorCodigo:
         print('> ', self.resolver_cadena(instr.cad))
 
     def procesar_definicion(self, instr):
-        simbolo = TS.Simbolo(instr.id, TS.TIPO_DATO.NUMERO, 0)  # inicializamos con 0 como valor por defecto.
+        simbolo = TS.Simbolo(instr.id, TS.TIPO_DATO.NUMERO, 0)  # inicializamos con 0 como valor por defecto..
         self.ts_global.agregar(simbolo)
 
     def procesar_asignacion(self, instr):
