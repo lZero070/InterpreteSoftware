@@ -41,7 +41,7 @@ mq(a<4+c){
 //Se asigna a la variable a el valor de 11
 a=11
 /**
- * La variable b ya había sido declarada pero 
+ * La variable b ya había sido declarada pero cumple
  * dentro del ámbito del primer ciclo while, 
  * entonces no existe en este ámbito por lo que 
  * debe declararse.
@@ -55,14 +55,14 @@ c=13
  * mayor que 10, si el b es mayor que 11 y si
  * el de c es mayor que 12. 
  **/
-SI(a>10){
+CUMPLE(a>10){
 	estampar("a es mayor que 10.")
-	SI(b>11){
+	CUMPLE(b>11){
 		estampar("a es mayor que 10 y b es mayor que 11.")
-		SI(c>12){
+		CUMPLE(c>12){
 			estampar("a es mayor que 10, b es mayor que 11 y c es mayor que 12.")
 		}
 	}
-}SINO{
+}NO_CUMPLE{
 	estampar("a es menor o igual que 10.")
 }

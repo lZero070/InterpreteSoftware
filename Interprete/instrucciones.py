@@ -40,7 +40,7 @@ class Asignacion(Instruccion) :
         self.id = id
         self.expNumerica = expNumerica
 
-class SI(Instruccion) : 
+class CUMPLE(Instruccion) : 
     '''
         Esta clase representa la instrucción if.
         La instrucción if recibe como parámetro una expresión lógica y la lista
@@ -51,7 +51,7 @@ class SI(Instruccion) :
         self.expLogica = expLogica
         self.instrucciones = instrucciones
         
-class SINO(Instruccion) : 
+class NO_CUMPLE(Instruccion) : 
     '''
         Esta clase representa la instrucción if-else.
         La instrucción if-else recibe como parámetro una expresión lógica y la lista

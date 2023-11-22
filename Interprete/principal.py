@@ -25,7 +25,7 @@ class ProcesadorCodigo:
             ts_local = TS.TablaDeSimbolos(self.ts_global.simbolos)
             self.procesar_instrucciones(instr.instrucciones, ts_local)
 
-    def procesar_SI(self, instr):
+    def procesar_CUMPLE(self, instr):
         val = self.resolver_expreision_logica(instr.expLogica)
         if val:
             ts_local = TS.TablaDeSimbolos(self.ts_global.simbolos)
@@ -94,10 +94,10 @@ class ProcesadorCodigo:
                 self.procesar_asignacion(instr)
             elif isinstance(instr, Mientras):
                 self.procesar_mq(instr)
-            elif isinstance(instr, SI):
-                self.procesar_SI(instr)
-            elif isinstance(instr, SINO):
-                self.procesar_SINO(instr)
+            elif isinstance(instr, CUMPLE):
+                self.procesar_CUMPLE(instr)
+            elif isinstance(instr, NO_CUMPLE):
+                self.procesar_NO_CUMPLE(instr)
             else:
                 print('Error: instrucción no válida')
 
