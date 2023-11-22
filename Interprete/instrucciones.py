@@ -12,8 +12,8 @@ class Imprimir(Instruccion) :
 
 class Mientras(Instruccion) :
     '''
-        Esta clase representa la instrucción mientras.
-        La instrucción mientras recibe como parámetro una expresión lógica y la lista
+        Esta clase representa la instrucción mq.
+        La instrucción mq recibe como parámetro una expresión lógica y la lista
         de instrucciones a ejecutar si la expresión lógica es verdadera.
     '''
 

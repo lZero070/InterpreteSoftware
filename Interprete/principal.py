@@ -20,7 +20,7 @@ class ProcesadorCodigo:
         simbolo = TS.Simbolo(instr.id, TS.TIPO_DATO.NUMERO, val)
         self.ts_global.actualizar(simbolo)
 
-    def procesar_mientras(self, instr):
+    def procesar_mq(self, instr):
         while self.resolver_expreision_logica(instr.expLogica):
             ts_local = TS.TablaDeSimbolos(self.ts_global.simbolos)
             self.procesar_instrucciones(instr.instrucciones, ts_local)
@@ -93,7 +93,7 @@ class ProcesadorCodigo:
             elif isinstance(instr, Asignacion):
                 self.procesar_asignacion(instr)
             elif isinstance(instr, Mientras):
-                self.procesar_mientras(instr)
+                self.procesar_mq(instr)
             elif isinstance(instr, SI):
                 self.procesar_SI(instr)
             elif isinstance(instr, SINO):

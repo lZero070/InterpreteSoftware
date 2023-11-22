@@ -2,7 +2,7 @@
 reservadas = {
     'numero' : 'NUMERO',
     'imprimir' : 'IMPRIMIR',
-    'mientras' : 'MIENTRAS',
+    'mq' : 'MQ',
     'si': 'SI',
     'sino': 'SINO'
 }
@@ -130,7 +130,7 @@ def p_instruccion(t) :
     '''instruccion      : imprimir_instr
                         | definicion_instr
                         | asignacion_instr
-                        | mientras_instr
+                        | mq_instr
                         | si_instr
                         | sino_instr'''
     t[0] = t[1]
@@ -147,8 +147,8 @@ def p_asignacion_instr(t) :
     'asignacion_instr   : ID IGUAL expresion_numerica'
     t[0] =Asignacion(t[1], t[3])
 
-def p_mientras_instr(t) :
-    'mientras_instr     : MIENTRAS PARIZQ expresion_logica PARDER LLAVIZQ instrucciones LLAVDER'
+def p_mq_instr(t) :
+    'mq_instr     : MQ PARIZQ expresion_logica PARDER LLAVIZQ instrucciones LLAVDER'
     t[0] =Mientras(t[3], t[6])
 
 def p_if_instr(t) :

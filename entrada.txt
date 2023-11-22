@@ -27,11 +27,11 @@ imprimir("----------------")
  * desde el uno hasta el 5, esto se hace con 
  * dos ciclos while anidados. 
  **/
-mientras(a<4+c){	
+mq(a<4+c){	
 	a=a+1
 	numero b
 	b=0
-	mientras(b<4+c){
+	mq(b<4+c){
 		b=b+1
 		imprimir(a & " * " & b & " = " & a * b)
 	}
