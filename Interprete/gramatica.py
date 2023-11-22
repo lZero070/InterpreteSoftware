@@ -1,7 +1,7 @@
 
 reservadas = {
     'numero' : 'NUMERO',
-    'imprimir' : 'IMPRIMIR',
+    'estampar' : 'ESTAMPAR',
     'mq' : 'MQ',
     'si': 'SI',
     'sino': 'SINO'
@@ -127,7 +127,7 @@ def p_instrucciones_instruccion(t) :
     t[0] = [t[1]]
 
 def p_instruccion(t) :
-    '''instruccion      : imprimir_instr
+    '''instruccion      : estampar_instr
                         | definicion_instr
                         | asignacion_instr
                         | mq_instr
@@ -135,8 +135,8 @@ def p_instruccion(t) :
                         | sino_instr'''
     t[0] = t[1]
 
-def p_instruccion_imprimir(t) :
-    'imprimir_instr     : IMPRIMIR PARIZQ expresion_cadena PARDER'
+def p_instruccion_estampar(t) :
+    'estampar_instr     : ESTAMPAR PARIZQ expresion_cadena PARDER'
     t[0] =Imprimir(t[3])
 
 def p_instruccion_definicion(t) :

@@ -3,8 +3,8 @@ class Instruccion:
 
 class Imprimir(Instruccion) :
     '''
-        Esta clase representa la instrucción imprimir.
-        La instrucción imprimir únicamente tiene como parámetro una cadena
+        Esta clase representa la instrucción estampar.
+        La instrucción estampar únicamente tiene como parámetro una cadena
     '''
 
     def __init__(self,  cad) :

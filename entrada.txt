@@ -1,6 +1,6 @@
 
 //Se imprime el encabezado
-imprimir("Tablas de" & " multiplicar")
+estampar("Tablas de" & " multiplicar")
 
 //Se declara la variable a, de tipo numero
 numero a
@@ -17,10 +17,10 @@ numero decimal
 decimal=3.11
 
 //Se imprime un separador
-imprimir(decimal)
+estampar(decimal)
 
 //Se imprime un separador
-imprimir("----------------")
+estampar("----------------")
 /**
  * Se imprimen las tablas del 1 al 5 y 
  * para cada tabla, se imprimen los resultados
@@ -33,9 +33,9 @@ mq(a<4+c){
 	b=0
 	mq(b<4+c){
 		b=b+1
-		imprimir(a & " * " & b & " = " & a * b)
+		estampar(a & " * " & b & " = " & a * b)
 	}
-	imprimir("----------------")
+	estampar("----------------")
 }
 
 //Se asigna a la variable a el valor de 11
@@ -56,13 +56,13 @@ c=13
  * el de c es mayor que 12. 
  **/
 SI(a>10){
-	imprimir("a es mayor que 10.")
+	estampar("a es mayor que 10.")
 	SI(b>11){
-		imprimir("a es mayor que 10 y b es mayor que 11.")
+		estampar("a es mayor que 10 y b es mayor que 11.")
 		SI(c>12){
-			imprimir("a es mayor que 10, b es mayor que 11 y c es mayor que 12.")
+			estampar("a es mayor que 10, b es mayor que 11 y c es mayor que 12.")
 		}
 	}
 }SINO{
-	imprimir("a es menor o igual que 10.")
+	estampar("a es menor o igual que 10.")
 }
