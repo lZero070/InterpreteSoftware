@@ -150,8 +150,8 @@ class Interfaz:
 
         self.ejemplo_text = scrolledtext.ScrolledText(root, width=60, height=20)
         self.ejemplo_text.insert(tk.END, ejemplo_codigo)
-        self.ejemplo_text.pack()
-
+        self.ejemplo_text.pack()  
+    
     def ejecutar_codigo(self):
         codigo = self.codigo_text.get("1.0", tk.END)
         instrucciones = g.parse(codigo)
@@ -179,7 +179,7 @@ class Interfaz:
         except Exception as e:
             # Captura cualquier excepción que ocurra durante el análisis del código
             self.mostrar_mensaje(f"Error de sintaxis: {str(e)}")
-
+                
 
     def mostrar_mensaje(self, mensaje):
         # Muestra un mensaje en la consola
