@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 class CrearInterprete:
     @csrf_exempt
     def interprete(request):
-        docExterno=open("C:/Users/Luisc/OneDrive/Documentos/Semestre2023-2/Compliadores/Ineterpetre_secundario/Interprete/vista/static/interprete.html")
+        docExterno=open("C:/Users/lgniw/OneDrive/Documents/GitHub/InterpreteSoftware/Interprete/vista/static/interprete.html")
         plt=Template(docExterno.read())
         docExterno.close()
         ctx=Context()
